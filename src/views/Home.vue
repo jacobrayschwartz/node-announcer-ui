@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Welcome to the SLBC announcement system</h1>
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: 'home',
   components: {
-    HelloWorld,
+  },
+  computed: {
+    count() {
+      return this.$store.state.counter;
+    },
+  },
+  methods: {
+    increment() {
+      this.$store.commit('increment');
+    },
   },
 };
 </script>
+
+<style lang="scss">
+
+</style>
