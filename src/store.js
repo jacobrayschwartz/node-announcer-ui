@@ -10,6 +10,7 @@ const store = new Vuex.Store({
     username: null,
     expires: null,
     isLoggedIn: true,
+    apiBaseAddress: process.env.VUE_APP_API_SERVER,
   },
   mutations: {
     toggleLogin(state) {

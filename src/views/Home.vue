@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <h1>Welcome to the SLBC announcement system</h1>
-
   </div>
 </template>
 
@@ -15,6 +14,9 @@ export default {
   computed: {
     count() {
       return this.$store.state.counter;
+    },
+    server() {
+      return this.$store.state.apiBaseAddress;
     },
   },
   methods: {

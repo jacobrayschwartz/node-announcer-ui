@@ -1,9 +1,8 @@
 <template>
   <div class="login container">
-    <div class="card border-dark login-card">
-      <h5 class="card-header">Login</h5>
+    <div class="card bg-light login-card">
       <div class="card-body">
-        <h5 class="card-title">Log in to access the announcements system</h5>
+        <h4 class="card-title">Log in to access the announcements system</h4>
         <form class="card-form" action="#">
           <div class="form-group">
             <label for="username">Username:</label>
