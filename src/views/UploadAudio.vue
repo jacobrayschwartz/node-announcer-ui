@@ -67,7 +67,8 @@ export default {
     },
     submit() {
       this.alerts = [];
-      api.upload(this.file, this.name, this.tags.split(' '))
+      const tags = this.tags.split(' ');
+      api.upload(this.file, this.name, tags)
         .then((res) => {
           if (res.data.err) {
             this.alerts.push({ classes: ['alert', 'alert-danger'], msg: res.data.msg });

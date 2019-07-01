@@ -3,7 +3,8 @@
     <h1>Welcome to the SLBC announcement system</h1>
     <h3>Please make a selection</h3>
     <div class="main-links container-fluid">
-      <div class="card play-audio-card link-card bg-primary text-white">
+      <div @click="routeTo('play')"
+        class="card play-audio-card link-card bg-primary text-white">
         <div class="card-body">
           <h4 class="card-title">Play Audio</h4>
           <div class="card-text">Play audio over PA system</div>

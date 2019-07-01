@@ -28,6 +28,7 @@ const store = new Vuex.Store({
       console.log(loginInfo);
       state.expires = new Date(Date.now() + (loginInfo.exp - loginInfo.iat));
       state.isLoggedIn = true;
+      Vue.localStorage.set('token', state.token);
     },
     logout(state) {
       console.log('Logging out');
