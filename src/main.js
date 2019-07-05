@@ -22,9 +22,18 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 const token = Vue.localStorage.get('token');
-console.log(`LOADING TOKEN: ${token}`);
-if (token) {
-  store.commit('login', { token, loggedIn: true });
+const expires = Vue.localStorage.get('expires');
+const username = Vue.localStorage.get('username');
+
+console.log(token);
+console.log(expires);
+console.log(username);
+console.log(Date.now());
+
+if (token && expires && username) {
+  if (expires > Date.now()) {
+    store.commit('login', { token, loggedIn: true, localStorageExpires: expires });
+  }
 }
 
 new Vue({
