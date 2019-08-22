@@ -32,6 +32,11 @@ const router = new Router({
       name: 'Play Audio',
       component: () => import('./views/ManageAudio.vue'),
     },
+    {
+      path: '/users',
+      name: 'Manage Users',
+      component: () => import('./views/Users.vue'),
+    },
   ],
 });
 

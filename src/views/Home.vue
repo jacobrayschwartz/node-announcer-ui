@@ -19,7 +19,8 @@
         </div>
       </div>
 
-      <div class="card user-management-card link-card bg-primary text-white">
+      <div @click="routeTo('users')"
+        class="card user-management-card link-card bg-primary text-white">
         <div class="card-body">
           <h4 class="card-title">Manage users</h4>
           <div class="card-text">Add or delete users with access to this system</div>

@@ -32,7 +32,9 @@ console.log(Date.now());
 
 if (token && expires && username) {
   if (expires > Date.now()) {
-    store.commit('login', { token, loggedIn: true, localStorageExpires: expires });
+    store.commit('login', {
+      token, loggedIn: true, localStorageExpires: expires, username,
+    });
   }
 }
 

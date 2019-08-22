@@ -129,10 +129,10 @@ export default {
           this.searching = false;
           if (err.response) {
             const { data } = err.response;
-            this.alerts.push({ classes: ['alert', 'alert-dange'], msg: data.msg });
+            this.alerts.push({ classes: ['alert', 'alert-danger'], msg: data.msg });
           } else {
             // No response from server, probably not up
-            this.alerts.push({ classes: ['alert', 'alert-dange'], msg: 'Unable to perform search...' });
+            this.alerts.push({ classes: ['alert', 'alert-danger'], msg: 'Unable to perform search...' });
           }
         });
     },
