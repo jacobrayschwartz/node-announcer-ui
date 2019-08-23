@@ -16,6 +16,8 @@
             <input type="file" name="file" id="file"
                    class="form-control-file" @change="fileChanged">
             <small class="form-text">Select an audio file to upload</small>
+            <br/>
+            <small v-if="file" class="form-text">Type: {{file.type}}</small>
           </div>
 
           <div class="form-group">
